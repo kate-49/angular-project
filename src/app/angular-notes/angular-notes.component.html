@@ -1,0 +1,84 @@
+<div class="whole-page">
+  <h1> Notes on Angular: </h1>
+  <br>
+  <div class="creating-components">
+    <h2> Creating Components </h2>
+    <p class="light-green">
+      Styles is an array because you can reference multiple css files.
+    </p>
+    <p class="blue">
+      Setting the prefix in the angular.json file means that a prefix is added to components when they are created.<br>
+      It does not amend existing elements.
+    </p>
+    <p class="green">
+      For a very small component you can write html directly into the template (within component.ts).<br>
+      It will need to be in backticks if it's on multiple lines. <br>
+      You can also do this with styles. Once you have more than 3 lines html/ css it's hard to use.
+    </p>
+    <p class="darkblue">
+      Assets show up because they are preconfigured in the angular.json file.<br>
+      Look at "asserts" and then point it at "src/asserts".<br>
+      This "assets" function can hold many files. When accessing these files in html don't add the source onto url.
+    </p>
+  </div>
+  <br><hr><br>
+  <div class="component-lifecycles">
+    <h2> Component Lifecycles </h2>
+    <p>Some events occur only once:</p>
+    <p class="blue">OnInit, AfterContentInit, AfterViewInit, OnDestroy <br></p>
+    <p>Some occur any time the components input properties  changes: </p>
+    <p class="blue"> OnChanges, DoCheck, AfterContentChecked, AfterViewChecked <br></p>
+    <p>Only common elements are: </p>
+    <p class="blue">OnChanges (multiple), OnInit (once), OnDestroy (once)</p>
+    <p style="font-weight: bold">
+      Hook into a component's lifecycle events in the component's class. <br>
+      You need to do 3 things to implement a lifecycle hook:
+    </p>
+      <ul>
+        <li><p>
+          Import the lifecycle event interface (e.g. OnInit) within the component.ts file, <br>
+          E.g. import &#123;Component, OnInit&#125; from &#64;angular/core
+          </p></li>
+        <li><p>Implement it on your class (e.g. export Class HomeComponent implements OnInit) </p></li>
+        <li><p>
+          Create a method on your class for that lifecycle hook (create under the constructor). <br>
+          Usually this is for fetching data. The method's name is always prefixed with ng e.g. ngOnInit
+          </p></li>
+        <br>
+        <li>
+          <img class="life-cycle-hooks" src="/assets/images/kate/lifecyclehooks.png" alt="life-cycle-hooks" />
+        </li>
+      </ul>
+  </div>
+  <br><hr><br>
+  <div class="manually-adding-a-component">
+    <h2> Manually adding a component (instead of cli) </h2>
+    <p>Add in all the files and make sure you import it into the app.module.ts file, then add it into the NgModule declarations. </p>
+    <p> You don't need the app.module.ts file if a module is standalone. </p>
+  </div>
+  <br><hr><br>
+  <div class="interpolation">
+    <h2> Interpolation </h2>
+    <ul>
+      <li><p> Use &#123; &#123;	&#125; &#125; for javascript expressions. This is usually just simple expressions.</p></li>
+      <li><p> Can bind component data by just inserting it in javascript  &#123; &#123;	&#125; &#125;</p></li>
+      <li><p> If you use binding you are telling it that the element will be javascript. E.g. wrap the alt in [] and you can remove the  &#123;	&#125; </p></li><br>
+      <li>
+       <img class="interpolation" src="/assets/images/kate/interpolation.png" alt="interpolation" />
+      </li>
+      <li><p>
+        With attribute binding (i.e. square brackets) you are binding it to an expression more than a component property.
+        In the alt example we are binding it to the specific string.
+      </li>
+      <li><p>
+        This is just a one way binding. Square brackets create a binding only from the component class to the HTML attribute.<br>
+        So if the data changes in the back end it will update the front end component,
+        but if for example a user types into an input box with [] binding it will not update the back end/ value in the components.
+      </p></li>
+      <li><p>
+        We can bind an attribute to the return value of a function on our component.<br><br>
+        <img class="bind-to-function" src="/assets/images/kate/bindtofunction.png" alt="bind-to-function" />
+      </p></li><br>
+    </ul>
+  </div>
+</div>

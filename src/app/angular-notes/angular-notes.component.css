@@ -1,0 +1,43 @@
+.darkblue {
+  font-weight: bold;
+  color: #1c6d92;
+}
+
+.blue {
+  font-weight: bold;
+  color: dodgerblue;
+}
+
+.green {
+  font-weight: bold;
+  color: darkgreen;
+}
+
+.light-green {
+  font-weight: bold;
+  color: green;
+}
+
+.life-cycle-hooks{
+  width: 40%;
+  height: 50%;
+  padding-left: 10%;
+}
+
+.bind-to-function,
+.interpolation {
+  width: 90%;
+  height: 70%;
+}
+
+p {
+  font-family: Helvetica, serif;
+  font-size: large;
+  color: darkgreen;
+}
+
+.whole-page {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
