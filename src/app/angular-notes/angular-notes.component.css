@@ -25,11 +25,18 @@
 }
 
 .bind-to-function,
+.product,
+.buybutton,
+.li,
 .interpolation {
   width: 90%;
   height: 70%;
 }
 
+.parent-child{
+  width: 20%;
+  height: 30%;
+}
 p {
   font-family: Helvetica, serif;
   font-size: large;

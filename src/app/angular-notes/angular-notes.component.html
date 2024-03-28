@@ -81,4 +81,47 @@
       </p></li><br>
     </ul>
   </div>
+  <br><hr><br>
+  <div class="event-binding">
+     <h2> Event binding </h2>
+     <p> Square brackets are used for binding information in front end to data in back end. </p>
+     <p> Parenthesis are used to bind events, i.e. information on front end going to back end. <br>
+         This can be filters or function elements. </p>
+     <p> Use *ngFor as a foreach, this can include elements from functions (e.g. *ngFor="let product of getFilteredProducts()) </p>
+     <p> Add null safe operator or if a value is null it will break (e.g. class="name" &#123; product?.name &#125; )</p>
+  </div>
+    <br><hr><br>
+  <div class="communicating">
+    <h2> Communicating between Angular components </h2>
+      <p>
+          <b>Parent-Child communication: </b> <br>
+          Parent contains all of the information but sends some of it to the child. <br>
+          E.g. parent component contains list of customers, child is responsible for displaying the data (e.g. a single customer).<br>
+          When the front end is interacted with (e.g. deactivate a customer) the child component passes this event back to the parent.
+      </p>
+      <img class="parent-child" src="/assets/images/kate/parent-child.png" alt="parent-child" />
+      <p>
+          Parent then listens to the event and takes some action that can change the state.
+          The new information is then sent back down to the child so the customer can see it.
+      </p>
+      <p>
+          <b>Container presenter pattern: </b> <br>
+          Parent contains and manipulates the data and the child presents it and sends message to parent based on user interaction.
+      </p>
+      <p>
+          The name we give this binding is determined by the type defined in the child component (e.g. if under ProductDetailsComponent it was called Kate: Type IProduct we would put Kate here)
+      </p>
+      <img class="product" src="/assets/images/kate/product.png" alt="product" />
+      <p> Filtered product is what is given from the parent. </p>
+      <p> We add input to the component element to tell it that it can receive information from a parent</p>
+      <img class="product2" src="/assets/images/kate/product2.png" alt="product2" />
+      <p>
+          Add a new event in product details that sends data to the other component
+          Within product-detatils.component.ts
+          <img class="buybutton" src="/assets/images/kate/buybutton.png" alt="buybutton" />
+          <br><br>
+          Within catalog.component.html
+          <img class="li" src="/assets/images/kate/li.png" alt="li" />
+      </p>
+  </div>
 </div>
