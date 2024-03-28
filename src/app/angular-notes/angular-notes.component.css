@@ -24,16 +24,17 @@
   padding-left: 10%;
 }
 
-.bind-to-function,
-.product,
-.buybutton,
-.li,
-.interpolation {
+.long {
   width: 90%;
   height: 70%;
 }
 
-.parent-child{
+.small {
+  width: 70%;
+  height: 50%;
+}
+
+.wide{
   width: 20%;
   height: 30%;
 }

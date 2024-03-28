@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {IProduct} from "./product.model";
 import {CurrencyPipe, NgForOf, NgIf} from "@angular/common";
 import {ProductDetailsComponent} from "../product-details/product-details.component";
+import {CartService} from "../cart.service";
 
 @Component({
   selector: 'app-catalog',
@@ -18,9 +19,9 @@ import {ProductDetailsComponent} from "../product-details/product-details.compon
 export class CatalogComponent {
   products: IProduct[];
   filter: string = '';
-  cart: IProduct[] = [];
 
-  constructor() {
+
+  constructor(private cartSvc: CartService) {
     this.products = [
       {
         id: 1,
@@ -199,8 +200,7 @@ export class CatalogComponent {
   }
 
   addToCart(product :IProduct) {
-    this.cart.push(product);
-    console.log(`product ${product.name} added to cart`);
+    this.cartSvc.add(product)
   }
 
   getFilteredProducts() {

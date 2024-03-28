@@ -46,7 +46,7 @@
           </p></li>
         <br>
         <li>
-          <img class="life-cycle-hooks" src="/assets/images/kate/lifecyclehooks.png" alt="life-cycle-hooks" />
+          <img class="small" src="/assets/images/kate/lifecyclehooks.png" alt="life-cycle-hooks" />
         </li>
       </ul>
   </div>
@@ -57,14 +57,14 @@
     <p> You don't need the app.module.ts file if a module is standalone. </p>
   </div>
   <br><hr><br>
-  <div class="interpolation">
+  <div class="long">
     <h2> Interpolation </h2>
     <ul>
       <li><p> Use &#123; &#123;	&#125; &#125; for javascript expressions. This is usually just simple expressions.</p></li>
       <li><p> Can bind component data by just inserting it in javascript  &#123; &#123;	&#125; &#125;</p></li>
       <li><p> If you use binding you are telling it that the element will be javascript. E.g. wrap the alt in [] and you can remove the  &#123;	&#125; </p></li><br>
       <li>
-       <img class="interpolation" src="/assets/images/kate/interpolation.png" alt="interpolation" />
+       <img class="long" src="/assets/images/kate/interpolation.png" alt="interpolation" />
       </li>
       <li><p>
         With attribute binding (i.e. square brackets) you are binding it to an expression more than a component property.
@@ -77,7 +77,7 @@
       </p></li>
       <li><p>
         We can bind an attribute to the return value of a function on our component.<br><br>
-        <img class="bind-to-function" src="/assets/images/kate/bindtofunction.png" alt="bind-to-function" />
+        <img class="long" src="/assets/images/kate/bindtofunction.png" alt="bind-to-function" />
       </p></li><br>
     </ul>
   </div>
@@ -99,7 +99,7 @@
           E.g. parent component contains list of customers, child is responsible for displaying the data (e.g. a single customer).<br>
           When the front end is interacted with (e.g. deactivate a customer) the child component passes this event back to the parent.
       </p>
-      <img class="parent-child" src="/assets/images/kate/parent-child.png" alt="parent-child" />
+      <img class="wide" src="/assets/images/kate/parent-child.png" alt="parent-child" />
       <p>
           Parent then listens to the event and takes some action that can change the state.
           The new information is then sent back down to the child so the customer can see it.
@@ -111,17 +111,41 @@
       <p>
           The name we give this binding is determined by the type defined in the child component (e.g. if under ProductDetailsComponent it was called Kate: Type IProduct we would put Kate here)
       </p>
-      <img class="product" src="/assets/images/kate/product.png" alt="product" />
+      <img class="long" src="/assets/images/kate/product.png" alt="product" />
       <p> Filtered product is what is given from the parent. </p>
       <p> We add input to the component element to tell it that it can receive information from a parent</p>
-      <img class="product2" src="/assets/images/kate/product2.png" alt="product2" />
+      <img class="long" src="/assets/images/kate/product2.png" alt="product2" />
       <p>
           Add a new event in product details that sends data to the other component
           Within product-detatils.component.ts
-          <img class="buybutton" src="/assets/images/kate/buybutton.png" alt="buybutton" />
+          <img class="small" src="/assets/images/kate/buybutton.png" alt="buybutton" />
           <br><br>
           Within catalog.component.html
-          <img class="li" src="/assets/images/kate/li.png" alt="li" />
+          <img class="wide" src="/assets/images/kate/li.png" alt="li" />
       </p>
   </div>
+    <br><hr><br>
+    <div class="services">
+        <h2> Services </h2>
+        <p>
+            Bucket that contains the app logic. <br>
+            Services are available to code through: dependency injection or inject function. <br>
+            Dependency injection - have a service (just a js class), then somewhere in code component exists. <br>
+            Component displays log in page and teh service does the magic that logs in a user. <br>
+            In component constructor we create a variable of correct type and angular will inject the service. <br>
+            Never do we manually construct service (i.e. using the new keyword).
+        </p>
+        <img class="small" src="/assets/images/kate/depinj.png" alt="depinj" />
+        <br>
+        <img class="small" src="/assets/images/kate/root.png" alt="root" />
+        <p>
+            This says the service is available anywhere in the angular app.
+            There is only ever one instance of a service!
+        </p>
+        <p> Dependency injection version 1: (better for testing) <br> </p>
+        <img class="small" src="/assets/images/kate/depinj1.png" alt="depinj1" />
+        <br>
+        <p> Dependency injection version 2: </p>
+        <img class="small" src="/assets/images/kate/depinj2.png" alt="depinj2" />
+    </div>
 </div>

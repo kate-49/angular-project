@@ -14,12 +14,12 @@ import {CurrencyPipe, NgIf} from "@angular/common";
 })
 export class ProductDetailsComponent {
   @Input() productDetails!: IProduct;
-  @Output() buy = new EventEmitter;
+  @Output() buy = new EventEmitter();
   getImageUrl(productDetails: IProduct) {
     if (!productDetails) return '';
     return '/assets/images/robot-parts/' + productDetails.imageName
   }
   buyButtonClicked(productDetails :IProduct) {
-    this.buy.emit;
+    this.buy.emit();
   }
 }
